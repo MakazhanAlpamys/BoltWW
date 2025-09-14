@@ -10,7 +10,11 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod --dir=dist",
+    "build:analyze": "npm run build && npx vite-bundle-analyzer dist",
+    "start": "npm run preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
