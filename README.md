@@ -104,7 +104,7 @@ def analyze_route_genetics(successful_rides, driver_behaviors):
 ### **🌐 Quick Start**
 ```bash
 # Clone the repository
-git clone https://github.com/boltww/analytics-platform
+git clone https://github.com/MakazhanAlpamys/BoltWW
 cd analytics-platform
 
 # Install dependencies (Node.js 18+ required)
