@@ -42,7 +42,7 @@ export function MainAnalyticsMap({ className, activeLayers }: MainAnalyticsMapPr
         <DemandLayer
           data={demandLayer.data.hexagons}
           isActive={activeLayers.includes('demand')}
-          onHexagonClick={(hexagon) => {
+          onHexagonClick={(_hexagon) => {
             // Handle demand hexagon click
           }}
         />
@@ -53,7 +53,7 @@ export function MainAnalyticsMap({ className, activeLayers }: MainAnalyticsMapPr
         <AvailabilityLayer
           data={availabilityLayer.data.hexagons}
           isActive={activeLayers.includes('availability')}
-          onHexagonClick={(hexagon) => {
+          onHexagonClick={(_hexagon) => {
             // Handle availability hexagon click
           }}
         />
@@ -64,7 +64,7 @@ export function MainAnalyticsMap({ className, activeLayers }: MainAnalyticsMapPr
         <SpeedViolationsLayer
           data={violationsLayer.data}
           isActive={activeLayers.includes('violations')}
-          onViolationClick={(violation) => {
+          onViolationClick={(_violation) => {
             // Handle speed violation click
           }}
         />
@@ -75,7 +75,7 @@ export function MainAnalyticsMap({ className, activeLayers }: MainAnalyticsMapPr
         <AnomaliesLayer
           data={anomaliesLayer.data}
           isActive={activeLayers.includes('anomalies')}
-          onAnomalyClick={(anomaly) => {
+          onAnomalyClick={(_anomaly) => {
             // Handle anomaly click
           }}
         />
@@ -86,7 +86,7 @@ export function MainAnalyticsMap({ className, activeLayers }: MainAnalyticsMapPr
         <TrafficJamsLayer
           data={trafficJamsLayer.data}
           isActive={activeLayers.includes('traffic_jams')}
-          onJamClick={(jam) => {
+          onJamClick={(_jam) => {
             // Handle traffic jam click
           }}
         />

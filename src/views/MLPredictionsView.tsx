@@ -42,7 +42,7 @@ export function MLPredictionsView() {
     const demandLevels: Array<'High' | 'Medium' | 'Low'> = ['High', 'Medium', 'Low'];
     
     // Generate demand forecasts
-    const forecasts: DemandForecast[] = zones.map((zone, index) => ({
+    const forecasts: DemandForecast[] = zones.map((zone) => ({
       zone,
       demand_level: demandLevels[Math.floor(Math.random() * 3)],
       confidence: 0.75 + Math.random() * 0.2,
@@ -52,7 +52,7 @@ export function MLPredictionsView() {
     }));
 
     // Generate route scores
-    const routes: RouteScore[] = Array.from({ length: 5 }, (_, index) => ({
+    const routes: RouteScore[] = Array.from({ length: 5 }, () => ({
       route_id: `Route-${Math.floor(Math.random() * 1000)}`,
       efficiency_score: 0.65 + Math.random() * 0.3,
       earnings_potential: `+${(10 + Math.random() * 25).toFixed(0)}%`,
@@ -277,7 +277,7 @@ export function MLPredictionsView() {
                 </div>
 
                 <div className="space-y-4">
-                  {anomalyAlerts.map((alert, index) => (
+                  {anomalyAlerts.map((alert) => (
                     <div key={alert.id} className={`p-4 rounded-lg bg-gray-700/50 border-2 ${getSeverityColor(alert.severity)} animate-pulse`}>
                       <div className="flex justify-between items-start mb-2">
                         <div className="text-sm font-medium text-white">{alert.type.replace('_', ' ')}</div>
